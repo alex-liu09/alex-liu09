@@ -1,0 +1,1409 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="GDOI Day1解题报告, CSS,HTML,C++,js">
+    <meta name="description" content="赛后大体总结：$GDOI$ 第一天的感悟还是挺多的，从中也学到了很多东西（虽然成绩不咋样）
+也希望明天的考试继续加油
+
+解题报告T1 邹忌讽齐王纳谏题意有 $n$ 个建议记录，按时间顺序罗列
+每条建议形如“$name \ way$”，其中 ">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    
+
+    <title>GDOI Day1解题报告 | alex_liu</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+<link rel="stylesheet" href="/js/prism/prism.css">
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/favicon.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">alex_liu</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/favicon.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">alex_liu</div>
+        <div class="logo-desc">
+            
+            OIer
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">GDOI Day1解题报告</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%AF%94%E8%B5%9B/">
+                                <span class="chip bg-color">比赛</span>
+                            </a>
+                        
+                            <a href="/tags/c/">
+                                <span class="chip bg-color">c++</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/">
+                                <span class="chip bg-color">解题报告</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/GDOI2022/" class="post-category">
+                                GDOI2022
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-05-12
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2022-07-11
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.5k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="赛后大体总结："><a href="#赛后大体总结：" class="headerlink" title="赛后大体总结："></a>赛后大体总结：</h1><p>$GDOI$ 第一天的感悟还是挺多的，从中也学到了很多东西（虽然成绩不咋样）</p>
+<p>也希望明天的考试继续加油</p>
+<hr>
+<h1 id="解题报告"><a href="#解题报告" class="headerlink" title="解题报告"></a>解题报告</h1><h2 id="T1-邹忌讽齐王纳谏"><a href="#T1-邹忌讽齐王纳谏" class="headerlink" title="T1 邹忌讽齐王纳谏"></a>T1 邹忌讽齐王纳谏</h2><h3 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h3><p>有 $n$ 个建议记录，按时间顺序罗列</p>
+<p>每条建议形如“$name \ way$”，其中 $name$ 是由小写英文字母组成的字符串表示提建议者的名字；$way$ 是一个为 $1$ 、$2$  或 $3$ 的数字，表示提建议的方式</p>
+<p>建议方式为 $1$ ，则获得价值为 $A$ 的奖励</p>
+<p>建议方式为 $2$ ，则获得价值为 $B$ 的奖励</p>
+<p>建议方式为 $3$ ，则获得价值为 $C$ 的奖励</p>
+<p>输出这些人之中获得奖励总和最多的是谁，他总共获得了多少奖励。如果获得最多奖励的不止一个人，请输出最早获得最多奖励的人</p>
+<h3 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h3><p>对于所有测试点，$0 \leq A,B,C \leq 1000$ ，$1 \leq n \leq 1000$ ，$1 \leq |name| \leq 3$ </p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/nrsk465v.png" alt=""></p>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>很明显一道签到题小模拟</p>
+<p><strong>法一：</strong> $100\ pts$</p>
+<p>暴力枚举，扫描出现的名字</p>
+<p>时间复杂度 $O(n^2)$</p>
+<hr>
+<p><strong>法二：</strong> $100\ pts$</p>
+<p>由于 $|name| \leq 3$</p>
+<p>$\therefore$ 可以将 $name$ 视为一个 $26$ 进制数，范围在 $1$ 到 $26+26^2+26^3$ 之间</p>
+<p>时间复杂度 $O(n)$</p>
+<p>这两种方法都能 $AC$ 这道题</p>
+<h2 id="T2-数列游戏"><a href="#T2-数列游戏" class="headerlink" title="T2 数列游戏"></a>T2 数列游戏</h2><h3 id="题意-1"><a href="#题意-1" class="headerlink" title="题意"></a>题意</h3><p>有一个长度为 $n$ 的序列 $a_1$, · · · , $a_n$ 。</p>
+<p>如果序列的长度大于 $1$ ，那么你就能进行操作，每次操作可以选择两个相邻的数 $a_i$ , $a_{i+1}$ 合并，得到一个新的数 $a_i \oplus a_{i+1}$，每次操作都会使序列的长度减少1。</p>
+<p>你需要进行若干次操作（可能是 $0$ 次），使得最终序列任意子区间的异或和不为 $0$ 。子区间的定义为连续的一段数 $[a_l, a_{l+1}, · · · , a_r]$ （ $l \leq r$ ）。求满足条件的最终序列的最长长度。</p>
+<h3 id="数据范围-1"><a href="#数据范围-1" class="headerlink" title="数据范围"></a>数据范围</h3><p>对于所有测试点，$1 \leq n \leq 10^5$ ，$0 \leq a_i \leq 10^9$</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/mitdne92.png" alt=""></p>
+<h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p><strong>法一：</strong> $0\ pts$</p>
+<p>模拟异或，验证当前序列是否满足题意</p>
+<p>时间复杂度 $O(n!)$</p>
+<hr>
+<p><strong>法二：</strong> $20\ pts$</p>
+<p>可以发现，每次合并会将序列变成若干个段，举序列 $4\ 5\ 6\ 7$ 为例</p>
+<p>若要合并 $4\ 5\ 6$ ，则序列就会变成 $(456)\ 7$</p>
+<p>但在题意中 $4\ 5\ 6$ 合并的顺序其实对结果没有影响</p>
+<p>所以可以枚举各段的分界线</p>
+<p>时间复杂度 $O(2^n)$</p>
+<hr>
+<p><strong>法三：</strong> $40\ pts$</p>
+<p>$\because a_i \leq 3$</p>
+<p>$\therefore$ 无论怎么异或，得到的结果一定 $\leq 3$</p>
+<p>$\therefore$ 最终序列长度不会超过 $3$</p>
+<p>$\therefore$ 只有 $2$ 条分界线</p>
+<p>那么就可以使用前缀异或和</p>
+<p>设 $S_i=a_1 \oplus a_2 · · · \oplus a_i$</p>
+<p>则 $a_l,· · ·,a_r$ 的异或和就是 $S_r \oplus S_{l-1}$</p>
+<hr>
+<p><strong>法四：</strong> $100\ pts$</p>
+<p>设最后分段为：</p>
+<script type="math/tex; mode=display">[a_1,· · ·,a_{v_1}],[a_{v_1+1},· · ·,a_{v_2}],· · ·,[a_{v_{m-1}+1},· · ·,a_n]</script><p>则每一段的异或和为 $S_{v_i} \oplus S_{v_{i-1}}$ ，第 $l$ 段到第 $n$ 段的异或和为 $S_{v_r} \oplus S_{v_l}$</p>
+<p>题目要让最后任意非空子区间异或和不为 $0$ ，也就是说任意 $S_{v_i}$ 不相同且不为 $0$</p>
+<p>$\therefore$ 要让最后的序列长度最长，就要从 $S_1,· · ·,S_n$ 中选最多的不相同且不为 $0$ 的数字</p>
+<p>统计 $S_1,· · ·,S_n$ 中出现过多少种不同且非 $0$ 的数字即可</p>
+<h2 id="T3-流水线"><a href="#T3-流水线" class="headerlink" title="T3 流水线"></a>T3 流水线</h2><h3 id="题意："><a href="#题意：" class="headerlink" title="题意："></a>题意：</h3><p>流水线就是将 $CPU$ 分成若干个任务模块，而一个模块又可以继续划分成更小的模块，小模块可以划分成更小的小小模块</p>
+<p>把一个任务划分后，每一个部分的代价会变少，但是可能会产生额外的代价</p>
+<p>我们可以用一棵以 $1$ 为根的有根树来描述模块之间的关系，每个节点是一个模块，每个节点的点权对应着该模块的时间代价。每一个非叶子节点可以划分成该节点的儿子节点对应的模块。</p>
+<p>每个模块都有一定的时间代价，而流水线最后的效率我们可以用划分的模块数乘上模块中时间代价最大的一个来表示，时间代价越小，流水线的效率越高。也就是说，假如小明最后把 $CPU$ 划分为了 $m$ 个模块，每个模块的代价为$w_1,w_2, · · · ,w_m$ ，则总代价为$m \times \max(w_1,w_2, · · · ,w_m)$。</p>
+<p>另外，我们认为根节点对应的模块不往下划分模块也是一种合法的方案。</p>
+<p>最后效率最高的流水线设计方案</p>
+<h3 id="数据范围："><a href="#数据范围：" class="headerlink" title="数据范围："></a>数据范围：</h3><p>对于所有测试点，$1 \leq n \leq 10^5 , 0 \leq w_i \leq 10^9 , w_i \leq w_{f_i}$</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/hwha6a16.png" alt=""></p>
+<h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p><strong>法一：</strong> $25\ pts$</p>
+<p>枚举每个点选择拆分或者不拆分</p>
+<p>时间复杂度 $O(2^n)$</p>
+<hr>
+<p><strong>法二：</strong> $50\ pts$</p>
+<p>对于每个 $m$ ，可以求出最小的 $\max(w_1, · · · ,w_m)$</p>
+<p>用树形 $DP$ 的思想解决</p>
+<p>设 $f[i][j]$ 表示以 $i$ 为根的子树，且选择了 $j$ 个点，根是否选择，能达到最小的 $\max(w_1, · · · ,w_m)$</p>
+<p>转移：</p>
+<ol>
+<li>选择 $i$ 节点 </li>
+</ol>
+<script type="math/tex; mode=display">f[i][1]=w_i</script><ol>
+<li>不选择 $i$ 节点<script type="math/tex; mode=display">f[i][j] \gets min^{j}_{k=1} \max(f[son][k],f[i][j-k])</script></li>
+</ol>
+<p>时间复杂度 $O(n^3)$ ，稍稍优化后可达到 $O(n^2)$</p>
+<hr>
+<p><strong>法三：</strong> $25\ pts$</p>
+<p>观察 $5$ 到 $7$ 的测试数据可以发现权值的数据很小</p>
+<p>那么我们就可以考虑枚举最大值，然后最小化模块个数 $m$</p>
+<p>只需要在树上从根往下，不断删除超过最大值的节点即可</p>
+<hr>
+<p><strong>法四：</strong> $100\ pts$ （我好像就是这种解法？？？）</p>
+<p>刚开始模拟时我们选择的是 $1$ 号节点，这是 $m$ 最小的方案，而我们是不断增大 $m$ 减少 $\max{w}$ 找到更优的方案</p>
+<p>设我们选择了 $w_1, · · · ,w_m$ ，那么只有将最大的 $w_i$ ，替换成它的所有儿子，才能减少 $\max{w}$</p>
+<p>所以我们可以用一个堆来维护目前已经选择的点，关键字为 $w_i$ ，每次选择最大的然后弹出，替换成它的儿子，同时更新答案。直到堆顶无法被分解时截止。</p>
+<p>时间复杂度 $O(nlogn)$</p>
+<h2 id="T4-小学生计数题"><a href="#T4-小学生计数题" class="headerlink" title="T4 小学生计数题"></a>T4 小学生计数题</h2><h3 id="题意-2"><a href="#题意-2" class="headerlink" title="题意"></a>题意</h3><p>给定 $n$ 种难度以及每种难度的题数，问有多少种方案选择一些题目，使得它们的难度形成公差非 $0$ 的等差数列，且每个题目的难度都是公差的倍数</p>
+<h3 id="数据范围-2"><a href="#数据范围-2" class="headerlink" title="数据范围"></a>数据范围</h3><p>对于所有测试点:<br>$1 \leq n, c_i \leq 10^5,0 \leq a_i \leq 10^5,m=\sum\limits_{i=1}^nc_i ≤ 10^5,2 ≤ L ≤ R ≤ m,a_i$<br>两两不同。</p>
+<p><img src="https://cdn.luogu.com.cn/upload/image_hosting/0jymyl3x.png" alt=""></p>
+<p>特殊性质 $1$ ：满足 $R-L\leq10$</p>
+<p>特殊性质 $2$ ：满足所有 $c_i = 1$</p>
+<h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><p><strong>法一：</strong> $20\ pts$</p>
+<p>直接二进制枚举可能的组题方式，然后检验长度是否在 $L$ 和 $R$ 之间以及是否为等差数列即可</p>
+<p>时间复杂度 $O(n \times 2^n)$</p>
+<hr>
+<p><strong>法二：</strong> $30\ pts$</p>
+<p>对于一种组题方式而言，如果确定了它的公差、首项、长度，那么这个题目集合就是唯一的</p>
+<p>不妨暴力枚举这三个要素，同时在最内层从短到长枚举长度的过程中，不断乘上相应难度题目的数量进行统计</p>
+<p>时间复杂度 $O(n^3)$</p>
+<hr>
+<p><strong>法三：</strong> $60\ pts$</p>
+<p>调和级数枚举</p>
+<p>先引入结论：（怎么证明呢？我也不知道，上网查资料吧）</p>
+<script type="math/tex; mode=display">n+\left\lfloor\dfrac{n}{2}\right\rfloor+\left\lfloor\dfrac{n}{3}\right\rfloor+ · · ·+\left\lfloor\dfrac{n}{n-1}\right\rfloor+1=O(nlognn)</script><p>考虑对上一档部分分的做法优化</p>
+<p>在枚举完公差 $d$ 之后，可以考虑提取所有难度为 $d$ 的倍数的题目组成新的递增序列（后文为倍数序列）</p>
+<p>不难发现一个合法答案就是倍数序列上的某一个长度合法的区间</p>
+<p>然后我们只需要在倍数序列上再枚举长度和首项即可</p>
+<p>时间复杂度：</p>
+<p>对于公差 $d$ ，难度为 $d$ 的倍数的题目是不会超过$\frac{n}{d}$ 道的</p>
+<p>$\therefore$ 时间复杂度为：</p>
+<script type="math/tex; mode=display">\sum\limits_{d=1}^n(\frac{n}{d})^2 \leq n \times \sum\limits_{d=1}^n\frac{n}{d} \leq O( n^2lognn )</script><hr>
+<p><strong>特殊性质 $1$ ：$R-L\leq10$</strong></p>
+<p>我们可以对调和级数枚举的做法优化</p>
+<p>先预处理出倍数序列的前缀和序列，在内层枚举长度的时候通过前缀积算出 $[1,L-1]$ 长度方案数的乘积，然后再去枚举 $[L,R]$ 的长度统计答案即可</p>
+<p>时间复杂度约为 $O(n^2 logn \times ( R - L ))$</p>
+<hr>
+<p><strong>特殊性质 $2$ ：$c_i = 1$</strong></p>
+<p>再对于调和级数枚举的做法进行优化 </p>
+<p>提取倍数序列后，因为 $c_i=1$ ，所以本质上只需要统计倍数序列中长度在 $[L,R]$ 之间的区间个数</p>
+<p>那么就可以直接枚举右端点来统计有多少个合法的左端点即可</p>
+<p><del>（当然可以推出来数学 $O(1)$ 公式，只是我不会）</del></p>
+<p>设右端点的位置为 $x$ ，有 $cnt$ 个合法的左端点，那么有：</p>
+<ol>
+<li><p>$x &lt; L$ ：$\quad$没有合法的左端点，即 $cnt=0$</p>
+</li>
+<li><p>$L \leq x \leq R$ ：$\quad cnt=x-L+1$</p>
+</li>
+<li><p>$x &gt; R$ ： $cnt=R-L+1$</p>
+</li>
+</ol>
+<hr>
+<p><strong>法四：</strong> $100\ pts$</p>
+<p>结合所有的做法，我们可以考虑对于倍数序列 $f$ 预处理出前缀积 $g$ ，前缀积逆元的前缀和 $h$</p>
+<p>那么枚举右端点 $x$ 时，可以计算出合法的方案数</p>
+<script type="math/tex; mode=display">\sum\limits_{i=x-R+1}^{x-L+1}\prod\limits_{j=1}^xf_j</script><script type="math/tex; mode=display">=\sum\limits_{i=x-R+1}^{x-L+1}\frac{g_x}{g_i-1}</script><script type="math/tex; mode=display">=g_x\times\sum\limits_{i=x-R+1}^{x-L+1}\frac{1}{g_i-1}</script><script type="math/tex; mode=display">=g_x\times(h_{x-L+1}-h_{x-R})</script><p>这样对于每一个右端点即可 $O(1)$ 计算</p>
+<p>时间复杂度（没有把逆元的时间复杂度算进去，可以 $O(n)$ 线性推 ）为 $O(nlogn)$</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">alex_liu</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="http://example.com/2022/05/12/gdoi-day1-jie-ti-bao-gao/">http://example.com/2022/05/12/gdoi-day1-jie-ti-bao-gao/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">alex_liu</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E6%AF%94%E8%B5%9B/">
+                                    <span class="chip bg-color">比赛</span>
+                                </a>
+                            
+                                <a href="/tags/c/">
+                                    <span class="chip bg-color">c++</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/">
+                                    <span class="chip bg-color">解题报告</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2022/05/12/gdoi-day2-jie-ti-bao-gao/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="GDOI Day2解题报告">
+                        
+                        <span class="card-title">GDOI Day2解题报告</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2022-05-12
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/GDOI2022/" class="post-category">
+                                    GDOI2022
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%AF%94%E8%B5%9B/">
+                        <span class="chip bg-color">比赛</span>
+                    </a>
+                    
+                    <a href="/tags/c/">
+                        <span class="chip bg-color">c++</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%A7%A3%E9%A2%98%E6%8A%A5%E5%91%8A/">
+                        <span class="chip bg-color">解题报告</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2022/05/12/dui-yu-gdoi-zhe-liang-tian-de-zong-jie/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="对于 GDOI 这两天的总结">
+                        
+                        <span class="card-title">对于 GDOI 这两天的总结</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-05-12
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/GDOI2022/" class="post-category">
+                                    GDOI2022
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%AF%94%E8%B5%9B/">
+                        <span class="chip bg-color">比赛</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">赛后总结</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('1')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE' || selection.getRangeAt(0).commonAncestorContainer.nodeName === 'CODE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: alex_liu<br />'
+            + '文章作者: alex_liu<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处： alex_liu。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="tencent"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2021-2022</span>
+            
+            <a href="/about" target="_blank">alex_liu</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+
+
+    <a href="mailto:2868391959@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2868391959" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2868391959" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+<script src="/js/prism/prism.js" async></script>
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/gh/Yafine/cdn@3.2.5/source/js/click_show_text.js" charset="utf-8"></script>
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script type="text/javascript">
+        //只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) {
+            document.write('<script type="text/javascript" src="/js/sakura.js"><\/script>');
+        }
+    </script>
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
