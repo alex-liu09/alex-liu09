@@ -4493,7 +4493,7 @@ git config --global user.email "邮箱"<span aria-hidden="true" class="line-numb
 <p>安装完成后的界面以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/063_213_9f9.jpg" alt=""></p>
 <p>从上图中能够看出，咱们已经成功安装了 <strong>hexo-deployer-git</strong></p>
 <h1 id="6-首次部署"><a href="#6-首次部署" class="headerlink" title="6. 首次部署"></a>6. 首次部署</h1><p>在 <strong>Git Bash</strong> 中输入：<strong>hexo deploy</strong>，开始将咱们最开始生成的 <strong>网站雏形</strong> 部署到 <strong>GitHub</strong> 上，这个过程须要花一些时间，须要耐心等待。部署完成后，Git Bash 窗口中以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/064_f1e_698.png" alt=""><br>上图中最后一行提示 <strong>Deploy done</strong>，意味着咱们部署成功了！</p>
-<p>若是咱们没有安装 hexo-deployer-git 就直接部署的话，最后一行 <strong>ERROR Deployer not found: git</strong> 提示咱们没有找到用来将网站部署到 <strong>Git</strong> 上的 <strong>Deployer</strong>。则须要按照前面的步骤来安装 <strong>hexo-deployer-git</strong>，而后再从新部署便可。</p>
+<p>若是咱们没有安装 <strong>hexo-deployer-git</strong> 就直接部署的话，最后一行 <strong>ERROR Deployer not found: git</strong> 提示咱们没有找到用来将网站部署到 <strong>Git</strong> 上的 <strong>Deployer</strong>。则须要按照前面的步骤来安装 <strong>hexo-deployer-git</strong>，而后再从新部署便可。</p>
 <h1 id="7-测试-GitHub-Pages"><a href="#7-测试-GitHub-Pages" class="headerlink" title="7. 测试 GitHub Pages"></a>7. 测试 GitHub Pages</h1><p>这时，咱们去访问咱们前面获得的 GitHub Pages：会发现原来几乎空白的网页，已经变成了前面咱们在本地经过 <strong><a href="http://www.javashuo.com/link?url=http://localhost:4000">http://localhost:4000</a></strong> 所访问到的网页了！<br>若是测试发现 <strong>GitHub Pages</strong> 仍是没有任何变化，不要着急，等几分钟以后再次刷新便可。</p>
 <p>至此，咱们就已经成功将本地的 <strong>Hexo</strong> 仓库部署到 <strong>GitHub</strong> 上了。</p>
 <h1 id="8-设置个人域名"><a href="#8-设置个人域名" class="headerlink" title="8. 设置个人域名"></a>8. 设置个人域名</h1><p>现在你的个人网站的地址是 <strong>yourname.github.io</strong>，如果觉得这个网址逼格不太够，这就需要你设置个人域名了。</p>
