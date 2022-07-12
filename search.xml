@@ -4513,8 +4513,7 @@ git config --global user.email "邮箱"<span aria-hidden="true" class="line-numb
   <entry>
     <title>生成 SSH 添加到 github</title>
     <url>/2022/07/12/sheng-cheng-ssh-tian-jia-dao-github/</url>
-    <content><![CDATA[<h1 id=""><a href="#" class="headerlink" title=" "></a> </h1><p>输入：</p>
-<p>打开 <code>git bash</code>，输入：</p>
+    <content><![CDATA[<p>打开 <code>git bash</code>，输入：</p>
 <pre class="line-numbers language-verilog" data-language="verilog"><code class="language-verilog">git <span class="token keyword">config</span> <span class="token operator">--</span>global user<span class="token punctuation">.</span>name <span class="token string">"YourName"</span>
 git <span class="token keyword">config</span> <span class="token operator">--</span>global user<span class="token punctuation">.</span>email <span class="token string">"YourEmail"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>这里的<code>YourName</code>输入你的 GitHub 用户名，<code>YourEmail</code>输入你的 GitHub 邮箱。这样 <a href="https://gtihub.com/">GitHub</a> 才能知道你是不是对应它的账户</p>
@@ -4524,8 +4523,7 @@ git config user<span class="token punctuation">.</span>email<span aria-hidden="t
 <p>创建SSH,一路回车</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">ssh-keygen -t rsa -C <span class="token string">"YourEmail"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>这个时候它会告诉你已经生成了<code>.ssh</code>的文件夹。在你的电脑中找到这个文件夹</p>
-<p><code>SSH</code>，简单来讲，就是一个秘钥，其中, <code>id_rsa</code>是你这台电脑的私人秘钥，不能给别人看的，<code>id_rsa.pub</code>是公共秘钥，可以随便给别人看。把这个公钥放在 GitHub 上，这样</p>
-<p>当你链接 GitHub 自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过 <code>git</code> 上传你的文件到 GitHub 上</p>
+<p><code>SSH</code>，简单来讲，就是一个秘钥，其中, <code>id_rsa</code>是你这台电脑的私人秘钥，不能给别人看的，<code>id_rsa.pub</code>是公共秘钥，可以随便给别人看。把这个公钥放在 GitHub 上，这样,当你链接 GitHub 自己的账户时，它就会根据公钥匹配你的私钥，当能够相互匹配时，才能够顺利的通过 <code>git</code> 上传你的文件到 GitHub 上</p>
 <p>而后在 GitHub 的<code>setting</code>中，找到<code>SSH keys</code>的设置选项，点击<code>New SSH key</code></p>
 <p>把你的<code>id_rsa.pub</code>里面的信息复制进去</p>
 <p>在<code>gitbash</code>中，查看是否成功</p>
