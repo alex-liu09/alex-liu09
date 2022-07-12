@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="计数问题, CSS,HTML,C++,js">
-    <meta name="description" content="基础计数算法加：inline int inc(int x,int k){return(x+=k)&amp;lt;mod?x:x-mod;}
-减：inline int dec(int x,int k){return(x-=k)&amp;gt;=0?x:x+m">
+    <meta name="keywords" content="将 hexo 部署到 github 上, CSS,HTML,C++,js">
+    <meta name="description" content="1、建立 GitHub 远程仓库仓库名称必需要遵照格式：帐户名.github.io，而且必须勾选 Initialize this repository with a README。以下图所示：点击 Create repository，建立仓">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +19,7 @@
 
     
 
-    <title>计数问题 | alex_liu</title>
+    <title>将 hexo 部署到 github 上 | alex_liu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -250,12 +249,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">计数问题</h1>
+                    <h1 class="description center-align post-title">将 hexo 部署到 github 上</h1>
                 </div>
             </div>
         </div>
@@ -371,12 +370,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/c/">
-                                <span class="chip bg-color">c++</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                <span class="chip bg-color">学习笔记</span>
+                            <a href="/tags/%E8%AE%BE%E7%BD%AE/">
+                                <span class="chip bg-color">设置</span>
                             </a>
                         
                     </div>
@@ -387,8 +382,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
-                                学习笔记
+                            <a href="/categories/blog%E8%AE%BE%E7%BD%AE/" class="post-category">
+                                blog设置
                             </a>
                         
                     </div>
@@ -400,21 +395,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-07-11
+                    2022-07-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-11
+                    2022-07-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    835
                 </div>
                 
 
@@ -439,95 +434,25 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="基础计数算法"><a href="#基础计数算法" class="headerlink" title="基础计数算法"></a>基础计数算法</h1><h2 id="加："><a href="#加：" class="headerlink" title="加："></a>加：</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">inc</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> k<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span><span class="token punctuation">(</span>x<span class="token operator">+=</span>k<span class="token punctuation">)</span><span class="token operator">&lt;</span>mod<span class="token operator">?</span>x<span class="token operator">:</span>x<span class="token operator">-</span>mod<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="减："><a href="#减：" class="headerlink" title="减："></a>减：</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">dec</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> k<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span><span class="token punctuation">(</span>x<span class="token operator">-=</span>k<span class="token punctuation">)</span><span class="token operator">&gt;=</span><span class="token number">0</span><span class="token operator">?</span>x<span class="token operator">:</span>x<span class="token operator">+</span>mod<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="乘："><a href="#乘：" class="headerlink" title="乘："></a>乘：</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">mul</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> k<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> x<span class="token operator">*</span>k<span class="token operator">*</span><span class="token number">1ll</span><span class="token operator">%</span>mod<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="除（逆元）："><a href="#除（逆元）：" class="headerlink" title="除（逆元）："></a>除（逆元）：</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">inv</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span><span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token function">quick_pow</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>mod<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">,</span>mod<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="快速幂："><a href="#快速幂：" class="headerlink" title="快速幂："></a>快速幂：</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">quick_pow</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">,</span><span class="token keyword">int</span> k<span class="token punctuation">,</span><span class="token keyword">int</span> mod<span class="token punctuation">)</span><span class="token punctuation">{</span>
-	<span class="token keyword">int</span> ans<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-	<span class="token keyword">while</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">{</span>
-		<span class="token keyword">if</span><span class="token punctuation">(</span>k<span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span>ans<span class="token operator">=</span>ans<span class="token operator">*</span>x<span class="token operator">*</span><span class="token number">1ll</span><span class="token operator">%</span>mod<span class="token punctuation">;</span>
-		x<span class="token operator">=</span>x<span class="token operator">*</span>x<span class="token operator">*</span><span class="token number">1ll</span><span class="token operator">%</span>mod<span class="token punctuation">;</span>
-	<span class="token punctuation">}</span>
-	<span class="token keyword">return</span> ans<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="阶乘逆元："><a href="#阶乘逆元：" class="headerlink" title="阶乘逆元："></a>阶乘逆元：</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">void</span> <span class="token function">ny</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-	fac<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>fac<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span>fac<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span>i<span class="token operator">*</span><span class="token number">1ll</span><span class="token operator">%</span>mod<span class="token punctuation">;</span>
-	vac<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token operator">=</span><span class="token function">inv</span><span class="token punctuation">(</span>fac<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&gt;=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">)</span>vac<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>vac<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span>i<span class="token operator">*</span><span class="token number">1ll</span><span class="token operator">%</span>mod<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="组合数计算"><a href="#组合数计算" class="headerlink" title="组合数计算"></a>组合数计算</h1><ol>
-<li>$C_n^m=\frac{n!}{m!(n-m)!}$<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">C</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">,</span><span class="token keyword">int</span> m<span class="token punctuation">)</span><span class="token punctuation">{</span>
-	<span class="token keyword">if</span><span class="token punctuation">(</span>n<span class="token operator">&lt;</span><span class="token number">0</span><span class="token operator">||</span>m<span class="token operator">&lt;</span><span class="token number">0</span><span class="token operator">||</span>n<span class="token operator">&lt;</span>m<span class="token punctuation">)</span><span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-	<span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token number">1ll</span><span class="token operator">*</span>fac<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token operator">*</span>vac<span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token operator">%</span>mod<span class="token operator">*</span>vac<span class="token punctuation">[</span>n<span class="token operator">-</span>m<span class="token punctuation">]</span><span class="token operator">%</span>mod<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li>$C_n^m=C_{n-1}^{m-1}+C_{n-1}^m$<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-	c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>i<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">(</span>c<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span>c<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">%</span>mod<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
-<li>$C_n^m=C_n^{m-1}\times \frac{n-m+1}{m}$<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">c<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">1ll</span><span class="token operator">*</span>c<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token punctuation">(</span>n<span class="token operator">-</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">%</span>mod<span class="token operator">*</span><span class="token function">inv</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">%</span>mod<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h1 id="组合数"><a href="#组合数" class="headerlink" title="组合数"></a>组合数</h1></li>
-</ol>
-<h2 id="组合数恒等式："><a href="#组合数恒等式：" class="headerlink" title="组合数恒等式："></a>组合数恒等式：</h2><ol>
-<li><p>$C_n^m=C_n^{n-m}$</p>
-</li>
-<li><p>$\sum\limits_{i=0}^{\min(n,m,k)}C_n^i\times C_m^{k-i}=C_{n+m}^k$</p>
-</li>
-<li><p>$\sum\limits_{i=0}^{n} C_n^i=2^n$</p>
-</li>
-<li><p>$\sum\limits_{i=1}^{n}C_n^i\times i=n\times 2^{n-1}$</p>
-</li>
-<li><p>$\sum\limits_{i=0}^{n}C_n^i\times i^2=n\times(n-1)\times2^{n-2}+n\times2^{n-1}$</p>
-</li>
-</ol>
-<h2 id="组合数的简单应用："><a href="#组合数的简单应用：" class="headerlink" title="组合数的简单应用："></a>组合数的简单应用：</h2><h3 id="例1："><a href="#例1：" class="headerlink" title="例1："></a>例1：</h3><p>给定一张二维棋盘，每次可以向上走或者向右走，求从 $(0,0)$ 走到 $(n,m)$ 的方案数</p>
-<p>显然一共要走 $n+m$ 步，考虑从这 $n+m$ 步中选出 $n$ 步向右走，剩下的向上走即可。答案即为 $C(n+m,n)$</p>
-<h3 id="例2："><a href="#例2：" class="headerlink" title="例2："></a>例2：</h3><p>$n$ 个小球，$m$ 种颜色，第 $i$ 种颜色的小球有 $a_i$ 个，排成一排，求方案数（同种颜色的小球之间不可区分）。</p>
-<p>我们不妨一种颜色一种颜色地放,每次从前面还没有使用过的空位置中挑选出 $a_i$ 个进行摆放。</p>
-<p>可以得到下式:</p>
-<script type="math/tex; mode=display">ans=\prod_{m}^{i=1} C_{n-{\sum_{j=1}^{i-1}}a_j}^{a_i}</script><script type="math/tex; mode=display">=\frac{n!}{\prod_{i=1}^{m}a_i!}</script><h3 id="例3："><a href="#例3：" class="headerlink" title="例3："></a>例3：</h3><p>$n$ 个数字，每个数字 $&gt;0$，要求和为 $s$，求方案数</p>
-<p>考虑把 $s$ 个相同的小球排成一排，两个相邻的小球之间会有一个间隔。<br>我们要做的就是在这 $s-1$ 个间隔中选出 $n-1$ 个间隔。<br>插入一块挡板，然后这样这 $s$ 个小球就被划分为了 $n$ 部分，且每个部分至少有一个球。</p>
-<p>故答案为 $C(s-1,n-1)$</p>
-<p>变式：$n$ 个数字，每个数字 $\geq0$，要求和为 $s$，求方案数。</p>
-<p>不妨在开始之前先向每一段挡板间隔中插入一个小球。<br>这样就变成了 $s+n$ 个小球，插入 $n$ 个挡板的方案数。也就是 $C(s+n-1,n-1)$</p>
-<p>改成每个数字 $&gt;x$ 也是同理。</p>
-<h3 id="例4："><a href="#例4：" class="headerlink" title="例4："></a>例4：</h3><p>计算长度为2n的合法的括号序列方案数。</p>
-<p>考虑计算不合法的方案数。</p>
-<p>一个不符合要求的 01 序列满足以下特征：</p>
-<ol>
-<li><p>必然在某一奇数位置 $2k+1$ 位上首先出现 $k+1$ 个 $0$ 的累计数和 $k$ 个 $1$ 的。</p>
-</li>
-<li><p>此后的 $2n-2k-1$ 位上有 $n-k$ 个 $1$ 和 $n-k-1$ 个 $0$。</p>
-</li>
-</ol>
-<p>然后我们考虑一种神奇的构造。把后面这些位置的 $0$ 和 $1$ 互换，使之成为 $n-k$ 个 $0$ 和 $n-k-1$ 个 $1$。</p>
-<p>而这样我们可以得到一个唯一的确定的序列，这个序列由 $n+1$ 个 $0$ 和 $n-1$ 个 $1$ 组成。</p>
-<p>反过来，我们考虑任意一个由 $n+1$ 个 $0$ 和 $n-1$ 个 $1$ 组成的序列。</p>
-<p>由于 $0$ 比 $1$ 多，所以一定存在某一奇数位置 $2k+1$ 位上首先出现 $k+1$ 个 $0$ 的累计数和 $k$ 个 $1$。</p>
-<p>然后我们再把这个序列后面的所有位置翻转回去，这样得到的序列可以保证一定是一个在我们的定义下的不合法的序列。</p>
-<p>因此，根据这种构造，我们可以证明这两个集合形成了双射，这自然就证明了它们的方案数是相同的。</p>
-<p>因此，不合法的方案数就是 $C(2n,n-1)$。</p>
-<p>故合法方案数是 $C(2n,n)-C(2n,n-1)$，我们称其为卡特兰数。</p>
-<h1 id="斯特林数"><a href="#斯特林数" class="headerlink" title="斯特林数"></a>斯特林数</h1><h2 id="集合拆分问题"><a href="#集合拆分问题" class="headerlink" title="集合拆分问题"></a>集合拆分问题</h2><p>集合 $\left \{ 1,2…..n\right \} $，划分为 $m$ 个非空集合的方案数。</p>
-<p>状态 $(i,j)$：表示 $\left\{1,2,…i\right\}$，划分为了 $j$ 个非空集合的方案数。<br>策略：考虑第 $i+1$ 个数字怎么放。</p>
-<ol>
-<li><p>自己新开一个集合 $(i,j)-&gt;(i+1,j+1)$</p>
-</li>
-<li><p>找原来一个已有集合丢进去 $(i,j)-&gt;j*(i+1,j)$ (有j种不同方案)</p>
-</li>
-</ol>
-<p>转移方程即为： $dp[i][j]=dp[i-1][j-1]+j*dp[i-1][j]$</p>
-<p>这个玩意有一个专业的名字——第二类斯特林数</p>
-<p>$S(n,m)$ 表示把大小为 $n$ 的集合拆成无序的 $m$ 个非空集合的方案数。</p>
-<p>由以上推论可得：$S(n,m)=S(n-1,m-1)+m*S(n-1,m)$</p>
-<h2 id="斯特林的容斥解法"><a href="#斯特林的容斥解法" class="headerlink" title="斯特林的容斥解法"></a>斯特林的容斥解法</h2><script type="math/tex; mode=display">S(n,m)=\frac{1}{m!}\sum\limits_{i=0}^{m}(-1)^i\times(m-i)^n</script><script type="math/tex; mode=display">=\sum\limits_{i=0}^{m}\frac{(-1)^i}{i!}\times\frac{(m-i)^n}{(m-i)!}</script><h2 id="自然幂转下降幂"><a href="#自然幂转下降幂" class="headerlink" title="自然幂转下降幂"></a>自然幂转下降幂</h2><script type="math/tex; mode=display">m^n=\sum\limits_{i=0}^{m}C_m^i\times S(n,i)\times i!</script><h1 id="划分数"><a href="#划分数" class="headerlink" title="划分数"></a>划分数</h1><h2 id="整数拆分问题"><a href="#整数拆分问题" class="headerlink" title="整数拆分问题"></a>整数拆分问题</h2><p>一个整数 $n$，求拆分为 $m$ 个无序非负整数的方案数</p>
-<p>那么：$dp[n][m]=dp[n][m-1]+dp[n-m][m]$</p>
-<p>这个玩意也叫划分数，称为 $p(n,m)$</p>
-<h1 id="8种计数问题"><a href="#8种计数问题" class="headerlink" title="8种计数问题"></a>8种计数问题</h1><p>$n$ 个小球放到 $m$ 个盘子里</p>
-<p>球有无标号？盘有无标号？是否允许有空盘子？</p>
-<h2 id="1-球有标号，盘有标号，可空"><a href="#1-球有标号，盘有标号，可空" class="headerlink" title="1.球有标号，盘有标号，可空"></a>1.球有标号，盘有标号，可空</h2><script type="math/tex; mode=display">ans=m^n</script><h2 id="2-球有标号，盘无标号，不可空"><a href="#2-球有标号，盘无标号，不可空" class="headerlink" title="2. 球有标号，盘无标号，不可空"></a>2. 球有标号，盘无标号，不可空</h2><script type="math/tex; mode=display">ans=S(n,m)</script><h2 id="3-球有标号，盘有标号，不可空"><a href="#3-球有标号，盘有标号，不可空" class="headerlink" title="3. 球有标号，盘有标号，不可空"></a>3. 球有标号，盘有标号，不可空</h2><script type="math/tex; mode=display">ans=S(n,m)\times m!</script><h2 id="4-球有标号，盘无标号，可空"><a href="#4-球有标号，盘无标号，可空" class="headerlink" title="4. 球有标号，盘无标号，可空"></a>4. 球有标号，盘无标号，可空</h2><script type="math/tex; mode=display">ans=\sum\limits_{i=1}^{m}S(n,i)</script><h2 id="5-球无标号，盘有标号，不可空"><a href="#5-球无标号，盘有标号，不可空" class="headerlink" title="5. 球无标号，盘有标号，不可空"></a>5. 球无标号，盘有标号，不可空</h2><script type="math/tex; mode=display">ans=C(n-1,m-1)</script><h2 id="6-球无标号，盘有标号，可空"><a href="#6-球无标号，盘有标号，可空" class="headerlink" title="6. 球无标号，盘有标号，可空"></a>6. 球无标号，盘有标号，可空</h2><script type="math/tex; mode=display">ans=C(n+m-1,m-1)</script><h2 id="7-球无标号，盘无标号，不可空"><a href="#7-球无标号，盘无标号，不可空" class="headerlink" title="7. 球无标号，盘无标号，不可空"></a>7. 球无标号，盘无标号，不可空</h2><script type="math/tex; mode=display">ans=p(n,m)</script><h2 id="8-球无标号，盘无标号，可空"><a href="#8-球无标号，盘无标号，可空" class="headerlink" title="8. 球无标号，盘无标号，可空"></a>8. 球无标号，盘无标号，可空</h2><script type="math/tex; mode=display">ans=p(n+m,m)</script>
+                <h1 id="1、建立-GitHub-远程仓库"><a href="#1、建立-GitHub-远程仓库" class="headerlink" title="1、建立 GitHub 远程仓库"></a>1、建立 GitHub 远程仓库</h1><p>仓库名称必需要遵照格式：<strong>帐户名.github.io</strong>，而且必须勾选 <strong>Initialize this repository with a README</strong>。以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/054_605_692.png" alt="在这里插入图片描述"><br>点击 <strong>Create repository</strong>，建立仓库。</p>
+<p>建立完成后，网页会跳到以下图所示界面：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/055_801_d08.png" alt=" "></p>
+<h1 id="2、测试访问-GitHub-Pages"><a href="#2、测试访问-GitHub-Pages" class="headerlink" title="2、测试访问 GitHub Pages"></a>2、测试访问 GitHub Pages</h1><p>点击上图中的 <strong>Settings</strong>，并将网页下拉至 GitHub Pages 部分，以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/056_dfd_7cc.png" alt="在这里插入图片描述"><br>从上图中的描述可知，咱们的网站已经被发布在了以下网址：<strong><a target="_blank" rel="noopener" href="http://www.javashuo.com/link?url=https://napoleon940911.github.io/">https://napoleon940911.github.io/</a></strong><br>开心！！！赶忙将这个网址输入浏览器并回车进入，以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/057_3e7_841.png" alt="在这里插入图片描述"><br><strong>GitHub Pages 测试成功！！！</strong></p>
+<p>至此，咱们就拥有了一个本身专属的网站了！！！</p>
+<h1 id="3、设置用户信息"><a href="#3、设置用户信息" class="headerlink" title="3、设置用户信息"></a>3、设置用户信息</h1><p>回到咱们建立的本地 <strong>Hexo</strong> 仓库，右击 <strong>Git Bash Here</strong>，依次输入：npm</p>
+<pre class="line-numbers language-none"><code class="language-none">git config --global user.name "用户名"
+git config --global user.email "邮箱"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>并回车，以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/058_452_1f3.png" alt="在这里插入图片描述"><br>这里主要是为了设置 <strong>Git</strong> 的 <strong>用户名</strong> 和 <strong>邮箱</strong>，主要是用来记录后续咱们往 <strong>GitHub</strong> 上提交的记录。上面的 <strong>用户名</strong> 和 <strong>邮箱</strong> 你们应该根据本身的 <strong>GitHub</strong> 帐户改成本身的 <strong>用户名</strong> 和 <strong>邮箱</strong>。</p>
+<h1 id="4、检验用户信息"><a href="#4、检验用户信息" class="headerlink" title="4、检验用户信息"></a>4、检验用户信息</h1><p>设置完成后，能够经过输入：<strong>git config —list</strong>，来检验 <strong>用户名</strong> 和 <strong>邮箱</strong> 是否设置成功，以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/059_346_6d7.png" alt="在这里插入图片描述"></p>
+<h1 id="5、更改站点配置文件"><a href="#5、更改站点配置文件" class="headerlink" title="5、更改站点配置文件"></a>5、更改站点配置文件</h1><p>用 <strong>Notepad++</strong> 或 <strong>记事本</strong> 等打开 <strong>Hexo</strong> 仓库根目录下面的 <strong>_config.yml</strong> 文件，并滚动到文件最后，能够看到以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/060_e8c_2ee.png" alt="在这里插入图片描述"><br>这里将上图中的内容更改成以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/061_834_399.png" alt="在这里插入图片描述"><br>关于上图中 <strong>repo</strong> 的获取，以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/062_7aa_f22.jpg" alt="在这里插入图片描述"><br>依次点击上图中的大小方框，便可将咱们须要的信息添加到 <strong>剪切板</strong> 里面，直接粘贴到前面提到的 <strong>_config.yml</strong> 文件中最后的 <strong>repo:</strong> 后面便可。svg</p>
+<p>保存 <strong>_config.yml</strong> 文件，并退出。测试</p>
+<h1 id="6、安装-hexo-deployer-git"><a href="#6、安装-hexo-deployer-git" class="headerlink" title="6、安装 hexo-deployer-git"></a>6、安装 hexo-deployer-git</h1><p>在 <strong>Git Bash</strong> 中输入：<strong>npm install hexo-deployer-git —save</strong>，开始安装 <strong>hexo-deployer-git</strong>，即 <strong>Hexo</strong> 部署到 <strong>Git</strong> 上的扩展。这个过程须要稍微等待一小会儿时间。</p>
+<p>安装完成后的界面以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/063_213_9f9.jpg" alt="在这里插入图片描述"></p>
+<p>从上图中能够看出，咱们已经成功安装了 <strong>hexo-deployer-git</strong></p>
+<h1 id="7、首次部署"><a href="#7、首次部署" class="headerlink" title="7、首次部署"></a>7、首次部署</h1><p>在 <strong>Git Bash</strong> 中输入：<strong>hexo deploy</strong>，开始将咱们最开始生成的 <strong>网站雏形</strong> 部署到 <strong>GitHub</strong> 上，这个过程须要花一些时间，须要耐心等待。部署完成后，Git Bash 窗口中以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/064_f1e_698.png" alt="在这里插入图片描述"><br>上图中最后一行提示 <strong>Deploy done</strong>，意味着咱们部署成功了！</p>
+<p>若是咱们没有安装 hexo-deployer-git 就直接部署的话，最后一行 <strong>ERROR Deployer not found: git</strong> 提示咱们没有找到用来将网站部署到 <strong>Git</strong> 上的 <strong>Deployer</strong>。则须要按照前面的步骤来安装 <strong>hexo-deployer-git</strong>，而后再从新部署便可。</p>
+<h1 id="8、再次测试-GitHub-Pages"><a href="#8、再次测试-GitHub-Pages" class="headerlink" title="8、再次测试 GitHub Pages"></a>8、再次测试 GitHub Pages</h1><p>这时，咱们再去访问咱们前面获得的 GitHub Pages：会发现原来几乎空白的网页，已经变成了前面咱们在本地经过 <strong><a target="_blank" rel="noopener" href="http://www.javashuo.com/link?url=http://localhost:4000">http://localhost:4000</a></strong> 所访问到的网页了！<br>若是测试发现 <strong>GitHub Pages</strong> 仍是没有任何变化，不要着急，等几分钟以后再次刷新便可。</p>
+<p>至此，咱们就已经成功将本地的 <strong>Hexo</strong> 仓库部署到 <strong>GitHub</strong> 上了。</p>
+
                 
             </div>
             <hr/>
@@ -553,7 +478,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/07/11/ji-shu-wen-ti/">http://example.com/2022/07/11/ji-shu-wen-ti/</a>
+                    <a href="http://example.com/2022/07/12/jiang-hexo-bu-shu-dao-github-shang/">http://example.com/2022/07/12/jiang-hexo-bu-shu-dao-github-shang/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -591,12 +516,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/c/">
-                                    <span class="chip bg-color">c++</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
-                                    <span class="chip bg-color">学习笔记</span>
+                                <a href="/tags/%E8%AE%BE%E7%BD%AE/">
+                                    <span class="chip bg-color">设置</span>
                                 </a>
                             
                         </div>
@@ -770,9 +691,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/07/12/jiang-hexo-bu-shu-dao-github-shang/">
                     <div class="card-image">
@@ -790,9 +712,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-07-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-07-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -805,6 +727,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -823,13 +746,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/07/11/cf348a-mafia/">
+                <a href="/2022/07/11/ji-shu-wen-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="CF348A Mafia">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="计数问题">
                         
-                        <span class="card-title">CF348A Mafia</span>
+                        <span class="card-title">计数问题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -846,8 +769,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E9%A2%98%E8%A7%A3/" class="post-category">
-                                    题解
+                            <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="post-category">
+                                    学习笔记
                                 </a>
                             
                             
@@ -857,12 +780,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CodeForces/">
-                        <span class="chip bg-color">CodeForces</span>
-                    </a>
-                    
                     <a href="/tags/c/">
                         <span class="chip bg-color">c++</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">
+                        <span class="chip bg-color">学习笔记</span>
                     </a>
                     
                 </div>
