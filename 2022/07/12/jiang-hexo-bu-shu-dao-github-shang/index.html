@@ -403,14 +403,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-07-13
+                    2022-07-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    895
+                    875
                 </div>
                 
 
@@ -442,15 +442,13 @@
 <pre class="line-numbers language-none"><code class="language-none">git config --global user.name "用户名"
 git config --global user.email "邮箱"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>这里主要是为了设置 <strong>Git</strong> 的 <strong>用户名</strong> 和 <strong>邮箱</strong>，主要是用来记录后续咱们往 <strong>GitHub</strong> 上提交的记录。上面的 <strong>用户名</strong> 和 <strong>邮箱</strong> 你们应该根据本身的 <strong>GitHub</strong> 帐户改成本身的 <strong>用户名</strong> 和 <strong>邮箱</strong>。</p>
-<h1 id="3-检验用户信息"><a href="#3-检验用户信息" class="headerlink" title="3. 检验用户信息"></a>3. 检验用户信息</h1><p>设置完成后，能够经过输入：<strong>git config —list</strong>，来检验 <strong>用户名</strong> 和 <strong>邮箱</strong> 是否设置成功，以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/059_346_6d7.png" alt=""></p>
-<p>再输入  <strong>git config —global —add safe.directory G:/blog/.deploy_git</strong> </p>
+<h1 id="3-检验用户信息"><a href="#3-检验用户信息" class="headerlink" title="3. 检验用户信息"></a>3. 检验用户信息</h1><p>设置完成后，能够经过输入：<strong>git config —list</strong>，来检验 <strong>用户名</strong> 和 <strong>邮箱</strong> 是否设置成功，以下图所示：<br><img src="https://s1.ax1x.com/2022/07/14/jfbcVg.png" alt=""></p>
+<p>再输入  <strong>git config —global —add safe.directory G:/blog/.deploy_git</strong>  （在开机会自动还原的机房里使用）</p>
 <h1 id="4-更改站点配置文件"><a href="#4-更改站点配置文件" class="headerlink" title="4. 更改站点配置文件"></a>4. 更改站点配置文件</h1><p>用 <strong>Notepad++</strong> 或 <strong>记事本</strong> 等打开 <strong>Hexo</strong> 仓库根目录下面的 <strong>_config.yml</strong> 文件，并滚动到文件最后<br>将内容更改成以下图所示：<br><img src="https://s1.ax1x.com/2022/07/12/jglCgx.png" alt=""></p>
 <p>关于上图中 <strong>repo</strong> 的获取，以下图所示：<br><img src="https://s1.ax1x.com/2022/07/12/jglkDO.png" alt=""><br>依次点击上图中的大小方框，便可将咱们须要的信息添加到 <strong>剪切板</strong> 里面，直接粘贴到前面提到的 <strong>_config.yml</strong> 文件中最后的 <strong>repo:</strong> 后面便可。</p>
 <p>保存 <strong>_config.yml</strong> 文件，并退出。测试</p>
 <h1 id="5-安装-hexo-deployer-git"><a href="#5-安装-hexo-deployer-git" class="headerlink" title="5. 安装 hexo-deployer-git"></a>5. 安装 hexo-deployer-git</h1><p>在 <strong>Git Bash</strong> 中输入：<strong>npm install hexo-deployer-git —save</strong>，开始安装 <strong>hexo-deployer-git</strong>，即 <strong>Hexo</strong> 部署到 <strong>Git</strong> 上的扩展。这个过程须要稍微等待一小会儿时间。</p>
-<p>安装完成后的界面以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/063_213_9f9.jpg" alt=""></p>
-<p>从上图中能够看出，咱们已经成功安装了 <strong>hexo-deployer-git</strong></p>
-<h1 id="6-首次部署"><a href="#6-首次部署" class="headerlink" title="6. 首次部署"></a>6. 首次部署</h1><p>在 <strong>Git Bash</strong> 中输入：<strong>hexo deploy</strong>，开始将咱们最开始生成的 <strong>网站雏形</strong> 部署到 <strong>GitHub</strong> 上，这个过程须要花一些时间，须要耐心等待。部署完成后，Git Bash 窗口中以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/064_f1e_698.png" alt=""><br>上图中最后一行提示 <strong>Deploy done</strong>，意味着咱们部署成功了！</p>
+<h1 id="6-首次部署"><a href="#6-首次部署" class="headerlink" title="6. 首次部署"></a>6. 首次部署</h1><p>在 <strong>cmd</strong> 中输入：<strong>hexo deploy</strong>，开始将咱们最开始生成的 <strong>网站雏形</strong> 部署到 <strong>GitHub</strong> 上，这个过程须要花一些时间，须要耐心等待。部署完成后，Git Bash 窗口中以下图所示：<br><img src="https://ewr1.vultrobjects.com/imgur1/000/001/569/064_f1e_698.png" alt=""><br>上图中最后一行提示 <strong>Deploy done</strong>，意味着咱们部署成功了！</p>
 <p>若是咱们没有安装 <strong>hexo-deployer-git</strong> 就直接部署的话，最后一行 <strong>ERROR Deployer not found: git</strong> 提示咱们没有找到用来将网站部署到 <strong>Git</strong> 上的 <strong>Deployer</strong>。则须要按照前面的步骤来安装 <strong>hexo-deployer-git</strong>，而后再从新部署便可。</p>
 <h1 id="7-测试-GitHub-Pages"><a href="#7-测试-GitHub-Pages" class="headerlink" title="7. 测试 GitHub Pages"></a>7. 测试 GitHub Pages</h1><p>这时，咱们去访问咱们前面获得的 GitHub Pages：会发现原来几乎空白的网页，已经变成了前面咱们在本地经过 <strong><a target="_blank" rel="noopener" href="http://www.javashuo.com/link?url=http://localhost:4000">http://localhost:4000</a></strong> 所访问到的网页了！<br>若是测试发现 <strong>GitHub Pages</strong> 仍是没有任何变化，不要着急，等几分钟以后再次刷新便可。</p>
 <p>至此，咱们就已经成功将本地的 <strong>Hexo</strong> 仓库部署到 <strong>GitHub</strong> 上了。</p>
